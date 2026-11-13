@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hall Salon | Barbería y peluquería en Lanús</title>
+<meta name="description" content="Barbería y peluquería en Lanús. Cortes clásicos, barba y atención en español e inglés. Reservá tu turno por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3ECDD;--surface:#FBF7EE;--ink:#14151A;--muted:#5B5648;--line:#D8CDB4;--red:#C1272D;--navy:#1C2B4B;--brass:#B8964E;--accent:#C1272D;--on:#fff;--dark:#14151A;--dark-ink:#F3ECDD;
+--disp:"Alfa Slab One",Georgia,"Times New Roman",serif;--cond:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+--stripes:repeating-linear-gradient(45deg,#C1272D 0 20px,#fff 20px 40px,#1C2B4B 40px 60px,#fff 60px 80px);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101114;--surface:#191B20;--ink:#F3ECDD;--muted:#B4AC9A;--line:#33322C;--accent:#E0474D;--brass:#D2B06A;color-scheme:dark}}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+*,*::before,*::after{box-sizing:border-box}
+html[lang=es] .en,html[lang=en] .es{display:none}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--dark)}
+a{color:inherit}:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.bar{height:10px;background:var(--stripes);background-size:113.14px 113.14px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--dark);color:var(--dark-ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--disp);font-size:1.25rem;text-decoration:none;letter-spacing:.04em}
+.brand i{width:14px;height:32px;border-radius:7px;background:var(--stripes);background-size:113.14px 113.14px;animation:spinv 3s linear infinite;box-shadow:0 0 0 2px var(--brass)}
+nav{display:flex;align-items:center;gap:22px}
+nav a.l{text-decoration:none;font-family:var(--cond);font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;opacity:.85}
+nav a.l:hover{opacity:1;color:var(--brass)}
+.lang{display:flex;border:2px solid var(--brass);border-radius:6px;overflow:hidden}
+.lang button{font:600 .9rem var(--cond);letter-spacing:.1em;padding:5px 10px;background:transparent;color:var(--dark-ink);border:0;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--brass);color:var(--dark)}
+.btn{display:inline-block;padding:13px 26px;background:var(--accent);color:var(--on);font-family:var(--cond);font-weight:700;font-size:1.1rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);border-radius:4px;box-shadow:4px 4px 0 var(--ink);transition:translate .15s ease,box-shadow .15s ease;cursor:pointer}
+.btn:hover{translate:-2px -2px;box-shadow:6px 6px 0 var(--ink)}
+.btn.alt{background:var(--surface);color:var(--ink)}
+.hero .btn{border-color:var(--brass);box-shadow:4px 4px 0 var(--brass)}.hero .btn:hover{box-shadow:6px 6px 0 var(--brass)}
+.hero{background:radial-gradient(90% 120% at 80% 40%,#26293A,var(--dark) 65%);color:var(--dark-ink);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding-top:64px;padding-bottom:64px}
+.tag{font-family:var(--cond);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:600;margin:0 0 14px}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.5rem,6.6vw,4.8rem);line-height:1.02;margin:0 0 20px;text-transform:uppercase}
+.lead{max-width:30em;margin:0 0 28px;opacity:.88;font-size:1.1rem}
+.acts{display:flex;flex-wrap:wrap;gap:14px}
+.stats{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:34px}
+.stats b{display:block;font-family:var(--disp);font-size:1.9rem;color:var(--brass);line-height:1.1}
+.stats span{font-family:var(--cond);letter-spacing:.1em;text-transform:uppercase;font-size:.95rem;opacity:.85}
+.poleWrap{display:grid;place-items:center;position:relative;min-height:360px}
+.poleWrap::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;border:2px dashed rgba(184,150,78,.5);animation:rot 40s linear infinite}
+.pole{position:relative;width:104px;height:330px;border-radius:52px;background:var(--stripes);background-size:113.14px 113.14px;animation:spinv 2.4s linear infinite;box-shadow:0 0 0 6px var(--brass),0 0 0 9px var(--dark),0 24px 50px rgba(0,0,0,.5)}
+.pole::after{content:"";position:absolute;inset:0;border-radius:52px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(255,255,255,.25) 28%,rgba(255,255,255,0) 45%,rgba(0,0,0,.4))}
+.mq{overflow:hidden;background:var(--red);color:#fff;border-block:3px solid var(--dark)}
+.mq div{display:flex;width:max-content;animation:mq 30s linear infinite}
+.mq span{padding:13px 26px;font-family:var(--cond);font-weight:700;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+section{padding:78px 0}
+.h{font-family:var(--disp);font-weight:400;font-size:clamp(1.9rem,4.2vw,2.9rem);line-height:1.08;margin:0 0 34px;text-transform:uppercase}
+.h::after{content:"";display:block;width:96px;height:9px;margin-top:14px;border-radius:2px;background:var(--stripes);background-size:113.14px 113.14px}
+.board{background:var(--dark);color:var(--dark-ink);border:2px solid var(--ink);border-radius:6px;box-shadow:8px 8px 0 var(--red);padding:12px 30px}
+.price{display:flex;align-items:center;gap:14px;padding:22px 0;border-bottom:1px dashed rgba(243,236,221,.25);cursor:pointer}
+.price:last-child{border-bottom:0}
+.nm{font-family:var(--cond);font-weight:600;font-size:1.4rem;letter-spacing:.05em;text-transform:uppercase;line-height:1.2}
+.nm small{display:block;font:400 .92rem var(--body);letter-spacing:0;text-transform:none;opacity:.7;margin-top:3px}
+.dots{flex:1;min-width:20px;border-bottom:2px dotted rgba(243,236,221,.35)}
+.price .p{font-family:var(--disp);font-size:1.25rem;color:var(--brass);white-space:nowrap}
+.price:hover .p{color:#fff}
+.price.ask{cursor:default;opacity:.8}.price.ask .p{font-size:1rem}
+.fine{color:var(--muted);font-size:.93rem;margin:22px 0 0}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--surface);border:2px solid var(--ink);border-radius:6px;box-shadow:6px 6px 0 var(--ink);padding:26px;transition:translate .2s ease,box-shadow .2s ease}
+.card:hover{translate:-2px -2px;box-shadow:8px 8px 0 var(--red)}
+.card svg{width:36px;height:36px;color:var(--red);margin-bottom:14px}
+.card h3{font-family:var(--cond);font-size:1.4rem;text-transform:uppercase;letter-spacing:.05em;margin:0 0 8px;line-height:1.15}
+.card p{margin:0;color:var(--muted)}
+.alt-bg{background:var(--surface);border-block:2px solid var(--ink)}
+.person{text-align:center}
+.av{width:96px;height:96px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;font-family:var(--disp);font-size:2.2rem;color:var(--dark);background:var(--bg);border:5px solid var(--brass);box-shadow:0 0 0 3px var(--red)}
+.person h3{margin-bottom:2px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.stars{color:var(--brass);letter-spacing:3px;margin-bottom:10px}
+.rev p{font-size:1.08rem;color:var(--ink);margin:0 0 14px}.rev small{color:var(--muted);font-family:var(--cond);letter-spacing:.1em;text-transform:uppercase}
+.book{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--surface);border:2px solid var(--ink);border-radius:6px;box-shadow:8px 8px 0 var(--ink);padding:28px}
+.form label{display:grid;gap:6px;font-family:var(--cond);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem}
+.form .full{grid-column:1/-1}
+.form input,.form select{font:400 1rem var(--body);padding:12px;border:2px solid var(--ink);border-radius:4px;background:var(--bg);color:var(--ink);text-transform:none;letter-spacing:0}
+.hours{list-style:none;margin:0 0 24px;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.hours b{font-family:var(--cond);text-transform:uppercase;letter-spacing:.06em;font-size:1.05rem}
+address{font-style:normal;font-size:1.15rem;margin:0 0 20px}
+footer{background:var(--dark);color:var(--dark-ink);padding:30px 0 40px;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+#splash{position:fixed;inset:0;z-index:100;background:var(--dark);color:var(--dark-ink);display:grid;place-content:center;text-align:center;pointer-events:none;padding:0 20px;animation:up .9s cubic-bezier(.7,0,.2,1) 2.6s forwards}
+#splash::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;background:var(--stripes);background-size:113.14px 113.14px}
+.sp-pole{width:min(300px,72vw);height:30px;margin:0 auto 28px;border-radius:15px;background:var(--stripes);background-size:113.14px 113.14px;box-shadow:0 0 0 4px var(--brass);transform:scaleX(0);animation:grow .8s cubic-bezier(.2,.7,.2,1) .2s forwards,spinh 1.2s linear infinite}
+.sp-n{font-family:var(--disp);font-size:clamp(2.4rem,9vw,4.6rem);line-height:1;letter-spacing:.04em;opacity:0;animation:fadeUp .8s ease .8s forwards}
+.sp-s{margin-top:12px;font-family:var(--cond);letter-spacing:.3em;text-transform:uppercase;color:var(--brass);opacity:0;animation:fadeUp .8s ease 1.2s forwards}
+@keyframes up{to{transform:translateY(-100%);visibility:hidden}}
+@keyframes grow{to{transform:scaleX(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes spinv{to{background-position:0 -113.14px}}
+@keyframes spinh{to{background-position:113.14px 0}}
+@keyframes rot{to{transform:rotate(360deg)}}
+@keyframes mq{to{transform:translateX(-50%)}}
+.hero .wrap>div:first-child>*{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) 3.1s both}
+.hero .wrap>div:first-child>*:nth-child(2){animation-delay:3.2s}.hero .wrap>div:first-child>*:nth-child(3){animation-delay:3.3s}.hero .wrap>div:first-child>*:nth-child(4){animation-delay:3.4s}.hero .wrap>div:first-child>*:nth-child(5){animation-delay:3.5s}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (max-width:860px){
+  nav a.l{display:none}
+  .hero .wrap,.book{grid-template-columns:1fr}
+  .poleWrap{min-height:300px}.pole{height:260px;width:90px}.poleWrap::before{width:250px;height:250px}
+  .grid4,.grid3,.form{grid-template-columns:1fr}
+  .board{padding:6px 18px}.price{flex-wrap:wrap}.dots{display:none}.price .p{margin-left:auto}
+  section{padding:56px 0}
+}
+@media (prefers-reduced-motion:reduce){#splash{display:none}.hero .wrap>div:first-child>*,.pole,.brand i,.mq div,.poleWrap::before{animation:none}.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@keyframes burst{from{opacity:1;transform:translate(0,0) scale(1)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+.b1,.b2{transform-origin:30px 56px}
+#cur{position:fixed;left:0;top:0;z-index:200;pointer-events:none;opacity:0;transition:opacity .2s ease}
+body.has-cur #cur{opacity:1}
+body.has-cur #cur.off{opacity:0}
+#cur svg{display:block;width:34px;height:auto;margin:-1px 0 0 -17px;transform-origin:17px 1px;transform:rotate(-32deg);filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+#cur .b1{transform:rotate(5deg);transition:transform .14s ease}
+#cur .b2{transform:rotate(-5deg);transition:transform .14s ease}
+#cur.open .b1{transform:rotate(15deg)}
+#cur.open .b2{transform:rotate(-15deg)}
+#cur.down .b1,#cur.down .b2{transform:rotate(0)}
+body.has-cur *{cursor:none}
+body.has-cur input,body.has-cur select,body.has-cur textarea,body.has-cur option{cursor:auto}
+.sn{position:fixed;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#E3B764;pointer-events:none;z-index:199;animation:burst .6s ease-out forwards}
+@media (pointer:coarse){#cur{display:none}}
+@media (prefers-reduced-motion:reduce){.sn{display:none}}
+</style>
+</head>
+<body>
+<div id="splash" aria-hidden="true"><div><div class="sp-pole"></div><div class="sp-n">HALL SALON</div><div class="sp-s"><span class="es">Barbería y peluquería</span><span class="en">Barber shop & hair salon</span></div></div></div>
+<div id="cur" aria-hidden="true"><svg class="cs" viewBox="0 0 60 100" aria-hidden="true"><g class="b1"><path d="M27 56 L30.5 2 L34 56Z" fill="#E9E6DF" stroke="#17171C" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 56 L23 77" stroke="#E3B764" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="86" r="9" fill="none" stroke="#E3B764" stroke-width="3.6"/></g><g class="b2"><path d="M27 56 L30.5 2 L34 56Z" fill="#E9E6DF" stroke="#17171C" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 56 L37 77" stroke="#E3B764" stroke-width="3.4" stroke-linecap="round"/><circle cx="40" cy="86" r="9" fill="none" stroke="#E3B764" stroke-width="3.6"/></g><circle cx="30" cy="56" r="3" fill="#E3B764" stroke="#17171C" stroke-width="1"/></svg></div>
+<header><div class="bar"></div><div class="wrap">
+  <a class="brand" href="#inicio"><i></i>HALL SALON</a>
+  <nav><a class="l" href="#servicios"><span class="es">Servicios</span><span class="en">Services</span></a><a class="l" href="#equipo"><span class="es">Equipo</span><span class="en">Team</span></a><a class="l" href="#resenas"><span class="es">Reseñas</span><span class="en">Reviews</span></a><a class="l" href="#visitanos"><span class="es">Visitanos</span><span class="en">Visit</span></a>
+  <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="es" aria-pressed="true">ES</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+  <a class="btn" href="#turnos" style="padding:8px 18px;font-size:1rem"><span class="es">Reservar</span><span class="en">Book</span></a></nav>
+</div></header>
+<main id="inicio">
+<div class="hero"><div class="wrap">
+  <div>
+    <p class="tag"><span class="es">Barbería y peluquería en Lanús</span><span class="en">Barber shop & hair salon in Lanús</span></p>
+    <h1><span class="es">Cortes clásicos, trato de primera.</span><span class="en">Classic cuts, first-class service.</span></h1>
+    <p class="lead"><span class="es">Atención personalizada, buena onda y un resultado a tu medida. Te atendemos también en inglés.</span><span class="en">Personalized service, great vibes and a result made for you. We also help you in English.</span></p>
+    <div class="acts"><a class="btn" href="#turnos"><span class="es">Reservar turno</span><span class="en">Book now</span></a><a class="btn alt" href="#servicios"><span class="es">Ver servicios</span><span class="en">See services</span></a></div>
+    <div class="stats"><div><b>5,0 ★</b><span>Google</span></div><div><b>+500</b><span><span class="es">reseñas</span><span class="en">reviews</span></span></div><div><b>ES / EN</b><span><span class="es">atención</span><span class="en">service</span></span></div></div>
+  </div>
+  <div class="poleWrap" aria-hidden="true"><div class="pole"></div></div>
+</div><div class="bar"></div></div>
+<div class="mq" aria-hidden="true"><div><span><span class="es">Corte clásico</span><span class="en">Classic cut</span></span><span>✂</span><span><span class="es">Todo tijera</span><span class="en">All scissors</span></span><span>✂</span><span><span class="es">Barba</span><span class="en">Beard</span></span><span>✂</span><span><span class="es">Vapor de ozono</span><span class="en">Ozone steam</span></span><span>✂</span><span><span class="es">Atención en inglés</span><span class="en">English spoken</span></span><span>✂</span></div></div>
+
+<section id="servicios"><div class="wrap">
+  <h2 class="h"><span class="es">Servicios y precios</span><span class="en">Services & prices</span></h2>
+  <div class="board rv" id="list"></div>
+  <p class="fine"><span class="es">Tocá un servicio para elegirlo y reservar. Valores de referencia, sujetos a actualización: confirmá el precio final al reservar.</span><span class="en">Tap a service to select it and book. Reference prices, subject to change: confirm the final price when booking.</span></p>
+</div></section>
+
+<section class="alt-bg"><div class="wrap">
+  <h2 class="h"><span class="es">Por qué Hall</span><span class="en">Why Hall</span></h2>
+  <div class="grid4">
+<div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5L21 18M8.5 16.5L21 6"/></svg><h3><span class="es">Consulta personalizada</span><span class="en">Personal consultation</span></h3><p><span class="es">Antes de cortar, charlamos para entender qué buscás y qué te queda mejor.</span><span class="en">Before the cut, we talk about what you want and what suits you best.</span></p></div><div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><h3><span class="es">Hablamos tu idioma</span><span class="en">We speak your language</span></h3><p><span class="es">Si venís de viaje, te ayudamos en inglés para que te sientas cómodo desde que llegás.</span><span class="en">Visiting from abroad? We help you in English so you feel at ease from the moment you arrive.</span></p></div><div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3><span class="es">Cuidamos tu tiempo</span><span class="en">We value your time</span></h3><p><span class="es">Cada turno se reserva con anticipación y cuidamos los horarios.</span><span class="en">Every appointment is booked in advance and we look after your schedule.</span></p></div><div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z"/><path d="M17 11h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v3M12 3v3"/></svg><h3><span class="es">Buena onda de principio a fin</span><span class="en">Great vibes, start to finish</span></h3><p><span class="es">Café y galletitas mientras esperás, y un equipo que te hace sentir en casa.</span><span class="en">Coffee and cookies while you wait, and a team that makes you feel at home.</span></p></div>
+  </div>
+</div></section>
+
+<section id="equipo"><div class="wrap">
+  <h2 class="h"><span class="es">El equipo</span><span class="en">The team</span></h2>
+  <div class="grid4">
+<div class="card person"><div class="av" aria-hidden="true">R</div><h3>Rodrigo</h3><p><span class="es">Corte y estilo</span><span class="en">Cuts & style</span></p></div><div class="card person"><div class="av" aria-hidden="true">J</div><h3>Julián</h3><p><span class="es">Corte y estilo</span><span class="en">Cuts & style</span></p></div><div class="card person"><div class="av" aria-hidden="true">F</div><h3>Fran</h3><p><span class="es">Corte y estilo</span><span class="en">Cuts & style</span></p></div><div class="card person"><div class="av" aria-hidden="true">R</div><h3>Ro</h3><p><span class="es">Recepción y atención</span><span class="en">Front desk & guest care</span></p></div>
+  </div>
+</div></section>
+
+<section id="resenas" class="alt-bg"><div class="wrap">
+  <h2 class="h"><span class="es">Lo que dicen de nosotros</span><span class="en">What people say</span></h2>
+  <div class="grid3">
+<div class="card rev"><div class="stars" aria-hidden="true">★★★★★</div><p><span class="es">Viajamos sin hablar mucho español y el equipo nos hizo sentir cómodos. El barbero cortó justo lo que pedimos.</span><span class="en">We didn’t speak much Spanish and the team made us feel welcome. The barber cut exactly what we asked for.</span></p><small><span class="es">Reseña en Google</span><span class="en">Google review</span></small></div><div class="card rev"><div class="stars" aria-hidden="true">★★★★★</div><p><span class="es">Llegué con un corte mal hecho en otro lugar y lo arreglaron con muchísimo cuidado.</span><span class="en">I came in with a bad cut from another shop and they fixed it with great care.</span></p><small><span class="es">Reseña en Google</span><span class="en">Google review</span></small></div><div class="card rev"><div class="stars" aria-hidden="true">★★★★★</div><p><span class="es">Una charla personalizada y profesional, y un resultado mejor de lo que esperaba.</span><span class="en">A personalized, professional conversation and a result better than I expected.</span></p><small><span class="es">Reseña en Google</span><span class="en">Google review</span></small></div>
+  </div>
+</div></section>
+
+<section id="turnos"><div class="wrap book">
+  <div>
+    <h2 class="h"><span class="es">Reservá tu turno</span><span class="en">Book your visit</span></h2>
+    <p><span class="es">Elegí el servicio, el día y el horario que te viene bien y te respondemos por WhatsApp para confirmar.</span><span class="en">Choose your service, day and time and we’ll reply on WhatsApp to confirm.</span></p>
+    <h3 style="font-family:var(--cond);text-transform:uppercase;letter-spacing:.08em;margin:26px 0 8px"><span class="es">Horarios</span><span class="en">Opening hours</span></h3>
+    <ul class="hours">
+      <li><b><span class="es">Martes a jueves</span><span class="en">Tue to Thu</span></b><span>11:00–14:00 / 15:00–20:00</span></li>
+      <li><b><span class="es">Viernes y sábado</span><span class="en">Fri and Sat</span></b><span>10:00–14:00 / 15:00–20:00</span></li>
+      <li><b><span class="es">Domingo y lunes</span><span class="en">Sun and Mon</span></b><span><span class="es">Cerrado</span><span class="en">Closed</span></span></li>
+    </ul>
+  </div>
+  <div class="form">
+    <label class="full"><span class="es">Tu nombre</span><span class="en">Your name</span><input id="f-n" type="text"></label>
+    <label class="full"><span class="es">Servicio</span><span class="en">Service</span><select id="f-s"></select></label>
+    <label><span class="es">Día</span><span class="en">Day</span><select id="f-d"></select></label>
+    <label><span class="es">Horario</span><span class="en">Time</span><select id="f-t"></select></label>
+    <div class="full"><a class="btn" id="f-go" href="#" target="_blank" rel="noopener"><span class="es">Enviar por WhatsApp</span><span class="en">Send on WhatsApp</span></a></div>
+  </div>
+</div></section>
+
+<section id="visitanos" class="alt-bg"><div class="wrap">
+  <h2 class="h"><span class="es">Dónde estamos</span><span class="en">Find us</span></h2>
+  <address>Av. San Martín 1726<br>Lanús, Provincia de Buenos Aires</address>
+  <div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=-34.6911901,-58.4032313&query_place_id=ChIJ73Oase7NvJURm86SMvvVOos" target="_blank" rel="noopener"><span class="es">Cómo llegar</span><span class="en">Get directions</span></a><a class="btn alt" href="https://www.instagram.com/hall_salon/" target="_blank" rel="noopener">Instagram</a><a class="btn alt" href="https://wa.me/5491131610249" target="_blank" rel="noopener">WhatsApp</a></div>
+</div></section>
+</main>
+<footer><div class="bar" style="margin:-30px 0 26px"></div><div class="wrap"><span>HALL SALON, Av. San Martín 1726, Lanús</span><span><span class="es">Propuesta de sitio de ejemplo</span><span class="en">Sample website proposal</span></span></div></footer>
+<script>
+(function(){
+  var list=document.getElementById("list"),sel=document.getElementById("f-s");
+  function pick(e){var p=e.target.closest&&e.target.closest(".price");if(!p||!sel)return;
+    sel.value=p.getAttribute("data-s");sel.dispatchEvent(new Event("change"));
+    document.getElementById("turnos").scrollIntoView({behavior:"smooth"});}
+  if(list){list.addEventListener("click",pick);list.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();pick(e)}})}
+  if(!window.matchMedia||!matchMedia("(pointer:fine)").matches)return;
+  var c=document.getElementById("cur");if(!c)return;
+  var NAT="input,select,textarea,option",CLK="a,button,summary,label,.tab,.price",on=false;
+  document.addEventListener("mousemove",function(e){
+    c.style.transform="translate3d("+e.clientX+"px,"+e.clientY+"px,0)";
+    if(!on){on=true;document.body.classList.add("has-cur")}
+    var t=e.target&&e.target.closest?e.target:null,nat=t&&t.closest(NAT);
+    c.classList.toggle("off",!!nat);c.classList.toggle("open",!!(t&&!nat&&t.closest(CLK)));
+  },{passive:true});
+  document.documentElement.addEventListener("mouseleave",function(){c.classList.add("off")});
+  document.documentElement.addEventListener("mouseenter",function(){c.classList.remove("off")});
+  document.addEventListener("mousedown",function(){c.classList.add("down")});
+  document.addEventListener("mouseup",function(){c.classList.remove("down")});
+  document.addEventListener("click",function(e){
+    if(!(e.target.closest&&e.target.closest(CLK)))return;
+    for(var i=0;i<8;i++){var a=Math.PI*2*i/8+Math.random()*.4,r=22+Math.random()*16,s=document.createElement("i");
+      s.className="sn";s.style.left=e.clientX+"px";s.style.top=e.clientY+"px";
+      s.style.setProperty("--dx",Math.cos(a)*r+"px");s.style.setProperty("--dy",Math.sin(a)*r+"px");
+      document.body.appendChild(s);(function(n){setTimeout(function(){if(n.parentNode)n.parentNode.removeChild(n)},700)})(s)}
+  });
+})();
+</script><script>
+(function(){
+  var S=[["c1","Corte en cabello corto","Short hair cut","45–55 min",17000],["c2","Corte de cabello y barba con vapor de ozono","Haircut & beard with ozone steam","55 min",20000],["c3","Corte en cabello largo (todo tijera)","Long hair cut (all scissors)","1 h 15 – 1 h 20",30000]];
+  var DAYS=[["Martes","Tuesday"],["Miércoles","Wednesday"],["Jueves","Thursday"],["Viernes","Friday"],["Sábado","Saturday"]];
+  var TIMES=[["Mañana (11 a 14)","Morning (11 to 2)"],["Tarde (15 a 20)","Afternoon (3 to 8)"]];
+  var WA="https://wa.me/5491131610249?text=",lang="es";
+  var list=document.getElementById("list"),sel=document.getElementById("f-s"),dy=document.getElementById("f-d"),tm=document.getElementById("f-t"),go=document.getElementById("f-go"),nm=document.getElementById("f-n");
+  list.innerHTML=S.map(function(s){return '<div class="price" role="button" tabindex="0" data-s="'+s[0]+'"><div class="nm"><span class="es">'+s[1]+'</span><span class="en">'+s[2]+'</span><small>'+s[3]+'</small></div><i class="dots"></i><span class="p"><span class="es">Desde $'+s[4].toLocaleString("es-AR")+'</span><span class="en">From ARS '+s[4].toLocaleString("en-US")+'</span></span></div>'}).join("")+'<div class="price ask"><div class="nm"><span class="es">¿Buscás otro servicio?</span><span class="en">Looking for something else?</span></div><i class="dots"></i><span class="p"><span class="es">Consultanos</span><span class="en">Just ask</span></span></div>';
+  function fill(el,arr,vi,ti){var v=el.value;el.innerHTML="";arr.forEach(function(a,i){var o=document.createElement("option");o.value=a[vi];o.textContent=a[ti];el.appendChild(o)});if(v)el.value=v}
+  function opts(){var i=lang==="es"?1:2;fill(sel,S,0,i);fill(dy,DAYS.map(function(d,k){return [k,d[0],d[1]]}),0,i);fill(tm,TIMES.map(function(d,k){return [k,d[0],d[1]]}),0,i)}
+  function upd(){
+    var es=lang==="es",s=S.filter(function(x){return x[0]===sel.value})[0]||S[0],n=nm.value.trim();
+    var d=DAYS[+dy.value||0][es?0:1],t=TIMES[+tm.value||0][es?0:1];
+    var m=es?"Hola, quiero pedir turno en Hall Salon."+(n?" Soy "+n+".":"")+" Servicio: "+s[1]+". Día: "+d+", "+t+"."
+            :"Hi, I’d like to book an appointment at Hall Salon."+(n?" I’m "+n+".":"")+" Service: "+s[2]+". Day: "+d+", "+t+".";
+    go.href=WA+encodeURIComponent(m);
+  }
+  function setLang(l){lang=l;document.documentElement.lang=l;[].forEach.call(document.querySelectorAll(".lang button"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-l")===l?"true":"false")});opts();upd();try{localStorage.setItem("hl",l)}catch(e){}}
+  [].forEach.call(document.querySelectorAll(".lang button"),function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-l"))})});
+  ["f-n","f-s","f-d","f-t"].forEach(function(id){var e=document.getElementById(id);e.addEventListener("input",upd);e.addEventListener("change",upd)});
+  var st;try{st=localStorage.getItem("hl")}catch(e){}
+  setLang(st||((navigator.language||"es").slice(0,2)==="en"?"en":"es"));
+  var mq=document.querySelector(".mq div");if(mq)mq.innerHTML+=mq.innerHTML;
+  var sp=document.getElementById("splash");if(sp)setTimeout(function(){if(sp.parentNode)sp.parentNode.removeChild(sp)},3700);
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add("in");io.unobserve(t);setTimeout(function(){t.style.transitionDelay=""},1300)}})},{threshold:.1});
+  [].forEach.call(document.querySelectorAll(".card,.board,.form,.h"),function(el){var i=[].indexOf.call(el.parentElement.children,el);el.classList.add("rv");el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
+})();
+</script>
+</body>
+</html>
